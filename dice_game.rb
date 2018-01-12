@@ -3,6 +3,7 @@ class DiceGame
     puts "\n\n << Welcome to 'High Rollers' - The Dice Game to Decide Who Takes the Bin Out or Who Makes Tea >> \n\n"
     @player_1_score = 0
     @player_2_score = 0
+    enter_name
   end
 
   def enter_name
@@ -10,6 +11,7 @@ class DiceGame
     @player_1 = gets.chomp.upcase
     print "\nPlayer 2: What is your name? "
     @player_2 = gets.chomp.upcase
+    play_game
   end
 
   def play_game
@@ -60,6 +62,7 @@ class DiceGame
       else
         puts "\nWe have a close game on our hands here!"
       end
+    final_score
   end
 
   def final_score
@@ -68,6 +71,3 @@ class DiceGame
 end
 
 game_1 = DiceGame.new
-game_1.enter_name
-game_1.play_game
-game_1.final_score
